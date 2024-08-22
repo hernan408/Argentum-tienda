@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Argentum - Tienda Oficial</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Argentum Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#coleccion">Colección</a></li>
+                <li><a href="#nosotros">Sobre Nosotros</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="header-icons">
+            <a href="#"><img src="carrito.png" alt="Carrito"></a>
+            <a href="#"><img src="busqueda.png" alt="Búsqueda"></a>
+            <a href="#"><img src="usuario.png" alt="Cuenta"></a>
+        </div>
+    </header>
+
+    <!-- Banner Principal -->
+    <section class="banner">
+        <div class="banner-content">
+            <h1>Bienvenido a Argentum</h1>
+            <p>Ropa que refleja la esencia de Argentina.</p>
+            <a href="#coleccion" class="btn-primary">Comprar Ahora</a>
+        </div>
+    </section>
+
+    <!-- Secciones Destacadas -->
+    <section class="destacados">
+        <div class="destacado">
+            <img src="coleccion-nueva.jpg" alt="Nueva Colección">
+            <h2>Nuevas Colecciones</h2>
+            <a href="#coleccion" class="btn-secondary">Descubre Más</a>
+        </div>
+        <div class="destacado">
+            <img src="ofertas.jpg" alt="Ofertas Exclusivas">
+            <h2>Ofertas Exclusivas</h2>
+            <a href="#coleccion" class="btn-secondary">Aprovecha Ahora</a>
+        </div>
+        <div class="destacado">
+            <img src="testimonios.jpg" alt="Testimonios">
+            <h2>Lo Que Dicen Nuestros Clientes</h2>
+            <a href="#testimonios" class="btn-secondary">Ver Opiniones</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Argentum. Todos los derechos reservados.</p>
+            <ul class="footer-links">
+                <li><a href="#">Política de Privacidad</a></li>
+                <li><a href="#">Términos y Condiciones</a></li>
+                <li><a href="#">FAQ</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
+/* styles.css */
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.header-icons a img {
+    height: 30px;
+    margin-left: 15px;
+}
+
+.banner {
+    background-image: url('banner.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.banner-content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.banner-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.btn-primary {
+    background-color: #FFD700;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.destacados {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 10%;
+}
+
+.destacado img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.destacado h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.btn-secondary {
+    background-color: #ADD8E6;
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+}
+
+footer {
+    background-color: #f8f8f8;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer-links li a {
+    text-decoration: none;
+    color: #333;
+}
+// scripts.js
+
+// Aquí podrías agregar funcionalidades como:
+// - Un carrusel de imágenes
+// - Un botón de scroll-to-top
+// - Efectos de hover, etc.
+
+// Ejemplo de botón de scroll-to-top
+const scrollTopBtn = document.createElement('button');
+scrollTopBtn.innerHTML = "↑";
+scrollTopBtn.classList.add('scrollTopBtn');
+document.body.appendChild(scrollTopBtn);
+
+scrollTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 300) {
+        scrollTopBtn.style.display = "block";
+    } else {
+        scrollTopBtn.style.display = "none";
+    }
+});
